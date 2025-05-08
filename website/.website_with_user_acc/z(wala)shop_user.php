@@ -1,0 +1,313 @@
+<?php
+include('../db_connection.php');
+include('../functions/common_function.php');
+
+?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+   <link rel="stylesheet" href="./shop_user.css">
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bad50d652e.js" crossorigin="anonymous"></script>
+   
+    <title>HOMEIFY!</title>
+  </head>
+
+  <body>		
+<!-- header(navigation bar) -->
+
+
+
+<!-- filter products(brands, categories) -->
+<section id="filters" class="section-p1 fix">
+    <h2>Filter Products</h2>
+    <!-- Brands filter -->
+    <div class="filter-option">
+        <label for="brand">Brands:</label>
+        <select id="brand" name="brand" >
+            <option value="all">All Brands</option>
+            <!-- PHP start -->
+            <?php
+            $select_brands = "SELECT * FROM brands"; // Removed the incorrect WHERE clause
+            $result_brands = mysqli_query($connection, $select_brands);
+
+            while ($row_data = mysqli_fetch_assoc($result_brands)) {
+                $brand_title = $row_data["brand_title"];
+                $brand_id = $row_data["brand_id"];
+                $selected = ($brand_id == $selectedBrand) ? "selected" : "";
+                echo "<option value='$brand_id' $selected>$brand_title</option>";
+            }
+            ?>  
+            <!-- PHP end -->
+        </select>
+    </div>
+
+    <!-- Categories filter -->
+    <div class="filter-option">
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="all">All Categories</option>
+            <!-- PHP start -->
+            <?php
+            $select_categories = "SELECT * FROM categories";
+            $result_categories = mysqli_query($connection, $select_categories);
+
+            while ($row_data = mysqli_fetch_assoc($result_categories)) {
+                $category_title = $row_data["category_title"];
+                $category_id = $row_data["category_id"];
+                $selected = ($category_id == $selectedCategory) ? "selected" : "";
+                echo "<option value='$category_id' $selected>$category_title</option>";
+            }
+            ?>
+            <!-- PHP end -->
+        </select>
+    </div>
+
+    <!-- Apply Filters button -->
+    <button class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
+
+    <!-- Reset Filters button -->
+    <button class="btn btn-secondary" onclick="resetFilters()">Reset Filters</button>
+
+    <script>
+    function applyFilters() {
+        var selectedBrand = document.getElementById("brand").value;
+        var selectedCategory = document.getElementById("category").value;
+        window.location.href = "./shop_user.php?brand=" + selectedBrand + "&category=" + selectedCategory;    
+    }
+
+    function resetFilters() {
+        // Reset both brand and category to 'all'
+        document.getElementById("brand").value   = "all";
+        document.getElementById("category").value = "all";
+
+        // Apply the reset immediately
+        applyFilters();
+    }
+</script>
+</section>
+
+
+
+
+<!-- product(it is random unless filtered), This includes a function -->
+  <section id="two" class="section-p1 fixed-section">
+      <h2>New Arrive Products</h2>
+      <div class="pro-container">
+          <?php
+           $selectedBrand = isset($_GET['brand']) ? $_GET['brand'] : 'all';
+           $selectedCategory = isset($_GET['category']) ? $_GET['category'] : 'all';
+       
+           // SQL query to retrieve products based on selected category and brand
+           $select_query = "SELECT products.*, brands.brand_title
+                           FROM products
+                           LEFT JOIN brands ON products.brand_id = brands.brand_id
+                           WHERE ('$selectedBrand' = 'all' OR products.brand_id = '$selectedBrand') AND
+                                 ('$selectedCategory' = 'all' OR products.category_id = '$selectedCategory') 
+                           ORDER BY RAND() LIMIT 0,8";
+       
+           $result_query = mysqli_query($connection, $select_query);
+       
+           // Check if there are any products
+           if (mysqli_num_rows($result_query) > 0) {
+               while ($row_data = mysqli_fetch_assoc($result_query)) {
+                   // Your existing code to display product details
+                   $product_id = $row_data['product_id'];
+                   $product_title = $row_data['product_title'];
+                   $product_brands = $row_data['brand_title'];
+                   $product_price = $row_data['product_price'];
+                   $product_image1 = $row_data['product_image1'];
+       
+                   echo "<div class='pro' onclick='openProductDetails(\"$product_id\");'>
+       
+                           <img src='../admin/product_images/{$product_image1}' alt='{$product_title}'>
+                           <div class='des'>
+                               <span>{$product_brands}</span>
+                               <h5>{$product_title}</h5>
+                               <div class='star'>
+                                   <i class='fas fa-star'></i>
+                                   <i class='fas fa-star'></i>
+                                   <i class='fas fa-star'></i>
+                                   <i class='fas fa-star'></i>
+                                   <i class='fas fa-star'></i>
+                               </div>
+                               </div>
+                               <a href='addtocart.php?id={$product_id}'><i class='fa-solid fa-cart-shopping cart'></i></a>
+                               </div>";
+               }
+           } else {
+               // Display a message when there are no products
+               echo "<p>There are no products in the selected category or brand.</p>";
+           }
+       
+          ?>
+      </div>
+  </section>
+  <script>
+      function openProductDetails(productId) {
+          // Redirect to the product details page with the product_id
+          window.location.href = `./shop_user.php?product_id=${productId}`;
+      }
+
+      // Function to open the lightbox
+      function openLightbox() {
+          document.getElementById('product-lightbox').style.display = 'flex';
+      }
+
+      // Function to close the lightbox
+      function closeLightbox() {
+          document.getElementById('product-lightbox').style.display = 'none';
+      }
+
+      // Check if the product_id is present in the URL and open the lightbox accordingly
+      window.addEventListener('DOMContentLoaded', function () {
+          const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          const productId = urlParams.get('product_id');
+          if (productId) {
+              openLightbox();
+          }
+      });
+  </script>
+
+<div>
+<?php
+if (isset($_GET['product_id'])) {
+    // Sanitize the product_id to prevent SQL injection
+    $product_id = mysqli_real_escape_string($connection, $_GET['product_id']);
+
+    // Fetch product details from the database
+    $select_query = "SELECT products.*, categories.category_title
+                    FROM products
+                    LEFT JOIN categories ON products.category_id = categories.category_id
+                    WHERE product_id = $product_id";
+
+    $result_query = mysqli_query($connection, $select_query);
+
+    if ($row_data = mysqli_fetch_assoc($result_query)) {
+        $product_category = $row_data['category_title']; // Use category_title instead of category_id
+        $product_title = $row_data['product_title'];
+        $product_price = $row_data['product_price'];
+        $product_description = $row_data['product_description'];
+        $product_image = $row_data['product_image1']; // Assuming the column name is 'product_image'
+        $product_image1 = $row_data['product_image2'];
+        $product_image2 = $row_data['product_image3'];
+        // Add more fields as needed
+
+        // Use these variables in your HTML
+        echo "<div id='product-lightbox' class='product three lightbox'>
+                <div class='header'>
+                    <!-- <div class='back' href='./shop.php'></div> -->
+                    <a class='back' href='#'></a>
+                </div>
+                <div class='main'>
+                    <div class='left'>
+                        <h1 class='category_title'>$product_category</h1>
+                        <h2 class='product_title'>$product_title</h2>
+                        <h3 class='product_price'>$ $product_price</h3>
+                        <img src='../admin/product_images/$product_image' alt='$product_title' />
+                        <img class='img1' src='../admin/product_images/$product_image1' alt='$product_title' />
+                        <img class='img2' src='../admin/product_images/$product_image2' alt='$product_title' />
+                        <!-- Add more product details here -->
+                    </div>
+                    <div class='right'>
+                        <p class='product_description'>$product_description</p>
+                        <!-- Add more product details here -->
+                    </div>
+                </div>
+                <div class='footer'>
+                    <form action='addtocart.php' method='get'>
+                        <div class='right footer'>
+                            <button class='right btn fa-solid fa-cart-shopping fa-lx' type='submit'>
+                                <p>Add to Cart</p>
+                            </button>
+                        </div>
+                        <!-- You can include hidden input fields to send additional data if needed -->
+                        <input type='hidden' name='id' value='$product_id'>
+                    </form>
+                </div>
+                
+            </div>";
+
+    }
+}
+?>
+</div>
+
+
+
+
+
+
+
+<!-- products without filter -->
+
+
+
+
+
+
+
+
+
+
+
+    <footer id="footer" class="section-p1">
+      <div class="col">
+        <h4>Contact</h4>
+        <p><strong>Adress:</strong> Monteverde corner Bruno Gempesaw Street, Quezon City, Metro Manila</p>
+        <p><strong>Phone:</strong> +93 977 446 464 646  </p>
+        <p><strong>Hours:</strong> 9:00 - 18:00, MON - Sat </p>
+        <div class="Follow">
+          <div class="icon"><strong>Follow us</strong></div>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-pinterest-p"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+      
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms & condition</a>
+        <a href="#">Contact us</a>
+      </div>
+      
+      <div class="col">
+        <h4>My account</h4>
+        <a href="../login,signup/login_signup.php">Sign In</a>
+        <a href="#">View cart</a>
+        <a href="#">My Whistlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      
+      <div class="col install">
+        <h4>Install App</h4>	
+        <p>Download from Appstore</p>
+          <img src="../pictures/play.jpg"> 
+         <p> Secured Payment Gateway</p>
+         <img class="qw" src="../pictures/pay.png">  
+      </div>
+      
+      <div class="copyright">
+      <p> ©2024, Website Activity(3h) - HTML CSS PHP JS Ecommerce</p>
+      </div>
+      </footer>
+
+ 
+<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+<script src="./shop_user.js"></script>
+<!-- <script src="./lightbox-plus-jquery.js"></script> -->
+ </body>
+</html>

@@ -1,0 +1,249 @@
+
+<!doctype html>
+    <html lang="en">
+      <head>
+        <link rel="stylesheet" href="about.css">
+    
+       <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/bad50d652e.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+        <title>welcome to our poultry farm!</title>
+      </head>
+    
+      <body>		
+    
+    <section id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="../flower/1.html">
+      <i class="fa-solid fa-dove"></i> Fowlfarm
+    </a>
+    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-5">  <!-- Changed mx-5 to mx-3 -->
+              <a class="nav-link active" aria-current="page" href="../homepage/homepage.php">Home</a>
+            </li>
+            <li class="nav-item mx-5">  <!-- Changed mx-5 to mx-3 -->
+              <a class="nav-link active" aria-current="page" href="../Shop/shop.php">Shop</a>
+            </li>
+            <li class="nav-item mx-5">  <!-- Changed mx-5 to mx-3 -->
+              <a class="nav-link active" aria-current="page" href="../about/about.html">About</a>
+            </li>
+            <li class="nav-item mx-5">  <!-- Changed mx-5 to mx-3 -->
+              <a class="nav-link active" aria-current="page" href="../faq/faq.html">FAQ</a>
+            </li>
+            <li class="nav-item mx-5">  <!-- Changed mx-5 to mx-3 -->
+              <a class="nav-link active" aria-current="page" href="../contact/contact.html">Contact</a>
+            </li>
+            
+            <li class="nav-item dropdown custom-account-dropdown nav-item mx-5"> <!-- Changed to mx-7 -->
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="../login,signup/login_signup.php" target="_self">Login/Signup</a></li>
+          </ul>
+        </li>
+          </ul>
+        </div>      
+        </nav>   
+        </section>
+        
+    <div class="text-overlay">
+      <h1>Explore who we are</h1>
+      <h2>All about Poultry</h2>
+  </div>
+</div>
+  <!-- Our Story Section -->
+  <div class="our-story-section">
+      <div class="text-container">
+          <h2>Our Story</h2>
+          <div class="our-story-text">
+              <p>At [Farm Name], we started with a simple goal: to bring the highest quality, freshest poultry products from our farm to your table. Our journey began over a decade ago with a small flock and a big dream—to create a sustainable, humane, and community-focused farm. Since then, we’ve grown and adapted, but our core values remain the same.</p>
+              <p>Our mission is to provide farm-fresh poultry raised with care and commitment. Every step of our process, from raising our birds to processing, is centered around quality, safety, and integrity. We believe in sustainable farming practices that respect both our animals and the land, ensuring that every product we provide is something we’re proud to share with your family.</p>
+              <p>Quality isn’t just a promise; it’s our way of life. At [Farm Name], we’re dedicated to delivering poultry products that meet the highest standards for nutrition, taste, and ethical farming. Whether you’re a loyal customer or a new friend, we invite you to experience the difference that true dedication makes.</p>
+          </div>
+      </div>
+      <div class="image-container">
+          <img src="./website/pictures/aboutphoto" alt="Farm Image">
+      </div>
+  </div>
+
+  <!-- Meet the Heart of Poultry Farm Section -->
+  
+      <div class="team-title">
+          <h2>Meet the Heart of Poultry Farm</h2>
+
+      <div class="about__section">
+          <a href="javascript:void(0);" title="Programmer">
+              <div class="about__slot">
+                  <div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('https://loremflickr.com/p/512/512/cat');"></div>
+                  <div class="about__info">
+                      <h4 class="name">Kent Alshahab</h4>
+                      <h5 class="title">Programmer</h5>
+                  </div>
+                  <div class="bioText">BSIT 4H<br><br>f g+ tw li</div>
+              </div>
+          </a>
+          <a href="javascript:void(0);" title="IT specialist">
+              <div class="about__slot">
+                  <div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('https://loremflickr.com/p/512/512/kitten');"></div>
+                  <div class="about__info">
+                      <h4 class="name">Ladylyn Buid</h4>
+                      <h5 class="title">IT specialist</h5>
+                  </div>
+                  <div class="bioText">BSIT 4H.<br><br>f g+ tw li</div>
+              </div>
+          </a>
+          <a href="javascript:void(0);" title="User Experience Designer">
+              <div class="about__slot">
+                  <div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('https://loremflickr.com/p/512/512/silly-cat');"></div>
+                  <div class="about__info">
+                      <h4 class="name">Rhea Cardines</h4>
+                      <h5 class="title">User Experience Designer</h5>
+                  </div>
+                  <div class="bioText">BSIT 4H<br><br>f g+ tw li</div>
+              </div>
+          </a>
+          <a href="javascript:void(0);" title="System Analyst">
+              <div class="about__slot">
+                  <div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('https://loremflickr.com/p/512/512/gato');"></div>
+                  <div class="about__info">
+                      <h4 class="name">Ronald Huerta</h4>
+                      <h5 class="title">System Analyst</h5>
+                  </div>
+                  <div class="bioText">BSIT 4H<br><br>f g+ tw li</div>
+              </div>
+          </a>
+          <a href="javascript:void(0);" title="Web Developer">
+              <div class="about__slot">
+                  <div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('./website/pictures/tracy.jfif');"></div>
+                  <div class="about__info">
+                      <h4 class="name">Tracy Jepollo</h4>
+                      <h5 class="title">Web Developer</h5>
+                  </div>
+                  <div class="bioText">BSIT 4H<br><br>f g+ tw li</div>
+              </div>
+          </a>
+          <a href="javascript:void(0);" title="Computer Scientist">
+              <div class="about__slot">
+                  <div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('https://loremflickr.com/p/512/512/chair-cat');"></div>
+                  <div class="about__info">
+                      <h4 class="name">Philbert Olandria</h4>
+                      <h5 class="title">Computer Scientist</h5>
+                  </div>
+                  <div class="bioText">BSIT 4H<br><br>f g+ tw li</div>
+              </div>
+          </a>
+      </div>
+  </div>
+</div>
+
+  <!-- Why We Stand For Section -->
+<!-- Why We Stand For Section -->
+<div class="About">
+<h2>Why We Stand For</h2>
+<div class="features">
+  <div class="feature-item">
+      <h3>01</h3>
+      <h4>Animal Welfare</h4>
+      <p>Our poultry is raised in spacious environments where they can roam freely and express natural behaviors. We follow strict welfare standards to ensure each bird is healthy and happy.</p>
+  </div>
+  <div class="feature-item">
+      <h3>02</h3>
+      <h4>Transparency</h4>
+      <p>We want our customers to know exactly where their food comes from. From our farm to your table, we maintain high standards so that you can feel confident in every purchase.</p>
+  </div>
+  <div class="feature-item">
+      <h3>03</h3>
+      <h4>Community Focus</h4>
+      <p>Our local farm, we are proud to serve and support our community. By sourcing our products locally, we build relationships with customers who trust us for quality and honesty.</p>
+  </div>
+</div>
+</div>
+
+<!-- Image and Text Section -->
+<div class="container">
+
+  <div class="image-section">
+      <img src="./website/pictures/practices" alt="practices">
+      <div class="play-button" onclick="openYouTubeVideo()"></div>
+  </div>
+  <div class="text-section">
+      <h2>Our Commitment to Sustainable and Ethical Farming Practices</h2>
+      <p>At [Farm Name], we believe in farming that respects both nature and our community. Our practices are centered around sustainability, animal welfare, and transparency.</p>
+      <ul>
+          <li>**Humane Treatment**: We prioritize the well-being of our poultry, providing them with ample space to move, fresh air, and a stress-free environment.</li>
+          <li>**Organic Feed**: Our birds are fed a high-quality, organic diet free from antibiotics and synthetic additives, ensuring the purity and quality of our products.</li>
+          <li>**Eco-Friendly Practices**: We implement waste reduction and recycling methods to minimize our environmental impact, maintaining the health of our land for future generations.</li>
+          <li>**Transparency and Accountability**: We are committed to keeping our customers informed about how their food is produced, from the farm to the table, ensuring trust and quality in every purchase.</li>
+      </ul>
+  </div>
+</div>
+</div>
+
+<script>
+function openYouTubeVideo() {
+  window.open("https://youtu.be/5deWpak8mRo?si=MH1M1M1SCL2BBNgj", "_blank");
+}
+</script>
+
+
+
+  <footer id="footer" class="section-p1">
+    <div class="col">
+      <h4>Contact</h4>
+      <p><strong>Adress:</strong> Monteverde corner Bruno Gempesaw Street, Quezon City, Metro Manila</p>
+      <p><strong>Phone:</strong> +93 977 446 464 646  </p>
+      <p><strong>Hours:</strong> 9:00 - 18:00, MON - Sat </p>
+      <div class="Follow">
+        <div class="icon"><strong>Follow us</strong></div>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-pinterest-p"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+    
+    <div class="col">
+      <h4>About</h4>
+      <a href="../about/about.html">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms & condition</a>
+      <a href="../contact/contact.html">Contact us</a>
+    </div>
+    
+    <div class="col">
+      <h4>My account</h4>
+      <a href="../login,signup/login_signup.php">Sign In</a>
+      <a href="#">View cart</a>
+      
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+    
+    <div class="col install">
+      <h4>Install App</h4>
+      <p>Download from Appstore</p>
+        <img src="../pictures/play.jpg"> 
+       <p> Secured Payment Gateway</p>
+       <img class="qw" src="../pictures/pay.png">  
+    </div>
+    
+    <div class="copyright">
+    <p> ©2024, Website Activity(3h) - HTML CSS PHP JS Ecommerce</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ </body>
+</html>

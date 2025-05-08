@@ -1,0 +1,338 @@
+.section-p1{
+  padding: 40px 80px;
+}
+
+
+body {
+  background-color: #282d36;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.contact-cards {
+  width: 100%;
+  margin: 0vh auto;
+  background-color: #d1d7e1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap; 
+}
+
+.contact-cards::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.contact-cards h1 {
+  text-align: center;
+  width: 100%; 
+  color: #333;
+}
+
+.contact-card {
+  background-color: rgb(23, 214, 214);
+  max-width: 19%; 
+  height: 240px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 blue;
+  transition: all 0.667s ease;
+  margin: 10px; 
+  color: #333;
+}
+
+.contact-card .image-container {  
+  padding: 15px;
+}
+  
+/* shaping, dito yun */
+.contact-card .image-container img.profile-image {
+  border-radius: 50%; 
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.contact-card .lower-content {
+  position: relative;
+  top: 0;
+  height: 240px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  transition: all 0.667s ease;
+  text-align: center;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0);
+}
+
+.contact-card .lower-content .basic-info h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-card .lower-content .position {
+  color: #555;
+}
+
+.contact-card .lower-content .contact-information {
+  margin-top: 175px;
+  transition: all 0.667s ease;
+}
+
+.contact-card .lower-content .contact-information .contact-method {
+  margin: 0;
+  padding: 10px;
+  border-bottom: solid 1px #dbdbdb;
+}
+
+.contact-card .lower-content .contact-information .contact-method label {
+  font-weight: bold;
+  margin-bottom: 3px;
+  display: block;
+  color: #333;
+}
+
+.contact-card .lower-content .contact-information .contact-method div {
+  color: #555;
+}
+
+.contact-card:hover {
+  box-shadow: 0 0 5px 2px #ff8762;
+}
+
+.contact-card:hover .lower-content {
+  top: -180px;
+}
+
+.contact-card:hover .lower-content .contact-information {
+  margin-top: 15px;
+}
+
+/*footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space space-between;
+    background-color: #0000;
+   }
+
+   footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+   }
+
+   footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+   }
+
+   footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+   }
+
+   footer p{
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    margin: 0 0 8px 0;
+   }
+
+   footer .follow{
+    margin-top: 20px;
+   }
+
+   footer .follow i{
+    margin-top: 20px;
+    color:#465b52;
+    padding-right: 4px;
+    cursor: pointer;
+   }
+
+   footer .install img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+    margin: 10px 0 15px 0;
+   }
+
+   footer .follow i:hover,
+   footer a:hover {
+    color: #088178 ;
+   }
+   
+   footer a{
+    color: black;
+    text-decoration: none;
+   }
+
+   footer .copyright {
+    width: 100%;
+    text-align: center;
+   }
+   .banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  /* Image Slider */
+  .images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 12s infinite;
+  }
+  
+  /* Fade Animation for Each Image */
+  .images img:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .images img:nth-child(2) {
+    animation-delay: 4s;
+  }
+  
+  .images img:nth-child(3) {
+    animation-delay: 8s;
+  }
+  
+  /* Text Overlay */
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .text-overlay h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .text-overlay h2 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+  
+  .text-overlay h1, .text-overlay h2 {
+    animation: slideIn 2s ease-out forwards;
+  }
+  
+  .text-overlay h1 {
+    animation-delay: 0s;
+  }
+  
+  .text-overlay h2 {
+    animation-delay: 0.5s; /* Delay second text for a staggered effect */
+  }
+  
+  /* Keyframes for Fade Animation */
+  @keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    33% { opacity: 1; }
+    43% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  .map-container {
+    width: 100%;
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px; /* Add padding */
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 60vh; /* Make height responsive */
+    border: none;
+  }
+  
+  .map-section {
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .map-container {
+      border-radius: 4px; /* Reduce border radius */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce box shadow */
+    }
+  }
+  
+  
+  .order-container{
+    background-color: black; /* Green background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .order-container h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #486a5a;
+    font-family: 'Amatic Sc';
+    font-weight: bolder;
+  }
+  
+  .order-container p {
+    font-size:2rem;
+    margin-bottom: 20px;
+    color: #ffc107;
+  }
+  
+  .contact-info {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact-info ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .contact-info ul li a {
+    color: #486a5a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  .contact-info ul li a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,161 @@
+/*/* Basic styling for FAQ section */
+.faq-section {
+    background-color: #f5f5dc; /* Light yellow-beige */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.faq-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-container h2 {
+    font-size: 2.5rem;
+    color: #8b5a2b; /* Set title color to brownish (Burlywood) */
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    background-color: #f1f1f1; /* Lighter background on hover */
+}
+
+.question {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #8b5a2b; /* Using burlywood color for the question */
+    cursor: pointer;
+}
+
+.answer {
+    font-size: 1rem;
+    color: burlywood;
+    margin-top: 10px;
+    display: none; /* Hide answer by default */
+}
+
+/* Styling for mobile devices */
+@media (max-width: 768px) {
+    .faq-container h2 {
+        font-size: 2rem;
+    }
+    .faq-item {
+        padding: 15px;
+    }
+}
+
+/* Dropdown Background */
+.dropdown-menu {
+    background-color: #deb887 !important; /* Light burlywood background */
+    border: 1px solid #deb887 !important; /* Matching border */
+  }
+  /* Account Dropdown Styles */
+  .custom-account-dropdown .nav-link {
+    color: #deb887; /* Burlywood color for the Account link */
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .custom-account-dropdown .nav-link:hover {
+    color: #8b5a2b; /* Darker burlywood color on hover */
+    text-decoration: none; /* Ensure no underline on hover */
+  }
+  
+  /* Dropdown Menu Styling */
+  .custom-account-dropdown .dropdown-menu {
+    background-color: #deb887; /* Light burlywood background */
+    border: 1px solid #deb887; /* Burlywood border for dropdown */
+  }
+  
+  .custom-account-dropdown .dropdown-item {
+    color: #8b5a2b; /* Text in dark burlywood */
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .custom-account-dropdown .dropdown-item:hover {
+    background-color: #deb887; /* Medium burlywood background on hover */
+    color: white; /* White text on hover for contrast */
+  }
+  
+  
+/*footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space space-between;
+    background-color: #0000;
+   }
+
+   footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+   }
+
+   footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+   }
+
+   footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+   }
+
+   footer p{
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    margin: 0 0 8px 0;
+   }
+
+   footer .follow{
+    margin-top: 20px;
+   }
+
+   footer .follow i{
+    margin-top: 20px;
+    color:#465b52;
+    padding-right: 4px;
+    cursor: pointer;
+   }
+
+   footer .install img{
+    border: 1px solid #8b5a2b;
+    border-radius: 6px;
+    margin: 10px 0 15px 0;
+   }
+
+   footer .follow i:hover,
+   footer a:hover {
+    color: #8b5a2b ;
+   }
+   
+   footer a{
+    color: black;
+    text-decoration: none;
+   }
+
+   footer .copyright {
+    width: 100%;
+    text-align: center;
+   }
+   
+
+
+
+   
+  

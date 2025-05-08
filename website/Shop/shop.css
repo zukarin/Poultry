@@ -1,0 +1,453 @@
+.section-p1{
+    padding: 50px 10px;
+}
+
+.fa-cart-shopping {
+  color: white; /* Cart icon in yellow */
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+/* Dropdown Background */
+.dropdown-menu {
+  background-color: #deb887 !important; /* Light burlywood background */
+  border: 1px solid #deb887 !important; /* Matching border */
+}
+/* Account Dropdown Styles */
+.custom-account-dropdown .nav-link {
+  color: #deb887; /* Burlywood color for the Account link */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-account-dropdown .nav-link:hover {
+  color: #8b5a2b; /* Darker burlywood color on hover */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Dropdown Menu Styling */
+.custom-account-dropdown .dropdown-menu {
+  background-color: #deb887; /* Light burlywood background */
+  border: 1px solid #deb887; /* Burlywood border for dropdown */
+}
+
+.custom-account-dropdown .dropdown-item {
+  color: #8b5a2b; /* Text in dark burlywood */
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.custom-account-dropdown .dropdown-item:hover {
+  background-color: #deb887; /* Medium burlywood background on hover */
+  color: white; /* White text on hover for contrast */
+}
+
+/* Filters Container */
+#filters {
+  float: left;
+  width: 18%;
+  height: 1370px;
+  padding: 50px 15px; /* Adjusted padding for a cleaner look */
+  background-color: white; /* Clean white background */
+  border: 1px solid #e0e0e0; /* Subtle border for definition */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Individual Filter Option */
+.filter-option {
+  margin-bottom: 50px; /* Reduced spacing between options */
+  font-family: 'Poppins', sans-serif; /* Clean and modern font */
+  font-size: 1rem; /* Uniform text size */
+  color: #333333; /* Neutral, readable text color */
+  height: 100px;
+}
+
+/* Filter Buttons */
+#filters button {
+  width: 100%;
+  margin-top: 15px; /* Adjusted spacing above buttons */
+  padding: 10px 0; /* Optimized padding for button height */
+  background-color:  rgb(201, 144, 86); /* Attractive golden button color */
+  color: #ffffff; /* Contrasting white text for readability */
+  font-family: 'Poppins', sans-serif; /* Same font family for consistency */
+  font-size: 1rem; /* Uniform font size */
+  font-weight: bold; /* Emphasized button text */
+  border: none; /* Remove border for cleaner look */
+  border-radius: 5px; /* Rounded button edges */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Button Hover Effect */
+#filters button:hover {
+  background-color:  rgb(145, 89, 34); /* Darker shade on hover */
+  color: #ffffff; /* Text stays white */
+  transform: scale(1.05); /* Slightly enlarges button on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+#two {
+  text-align: center;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 50px 10px;
+  background-color: white;
+}
+
+#two .pro-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#two .pro {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.3s ease; /* Slow transition for hover effect */
+  position: relative;
+}
+
+/* Hover Effect for Product Cards */
+#two .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  transition: all 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+/* Hover effect for the image itself */
+#two .pro img {
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.3s ease; /* Adding a scaling effect for the image */
+}
+
+#two .pro:hover img {
+  transform: scale(1.1); /* Zooms image a little when hovered */
+}
+
+/* Product Description Styling */
+#two .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#two .pro .des span {
+  color: #000;
+  font-size: 12px;
+}
+
+#two .pro .des h5 {
+  padding-top: 7px;
+  color: #000;
+  font-size: 14px;
+}
+
+#two .pro .des i {
+  font-size: 12px;
+  color: goldenrod;
+}
+
+#two .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(145, 89, 34);
+}
+
+/* Cart Button Styling */
+#two .pro .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: rgb(145, 89, 34);
+  font-weight: 5000;
+  color: white;
+  border: 1px solid #e4d7a1;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for the button */
+}
+
+#two .pro .cart:hover {
+  background-color: #8b5a2b; /* Change background to darker shade on hover */
+  transform: scale(1.1); /* Slightly increase button size on hover */
+}
+
+.fixed-section {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #0000;       
+    padding: 0px 50px;
+   }
+
+   footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+   }
+
+   footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+   }
+
+   footer p{
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    margin: 0 0 8px 0;
+   }
+
+   footer .follow{
+    margin-top: 20px;
+   }
+
+   footer .follow i{
+    margin-top: 20px;
+    color:#465b52;
+    padding-right: 4px;
+    cursor: pointer;
+   }
+
+   footer .install img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+    margin: 10px 0 15px 0;
+   }
+
+   footer .follow i:hover,
+   footer a:hover {
+    color: #088178 ;
+   }
+   
+   footer a{
+    color: black;
+    text-decoration: none;
+   }
+
+   footer .copyright {
+    /* position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0; */
+    
+    width: 100%;
+    text-align: center;
+   }
+   
+
+
+
+   /* start lightbox */
+   
+
+
+
+
+
+
+
+ /* dito simula */
+
+
+
+a {
+  text-decoration: none;
+  color: rgb(145, 89, 34);
+}
+
+#qt {
+  color: rgb(153, 153, 153);
+}
+
+p .fa[class~=angle] {
+  font-size: 1.3rem;
+  position: relative;
+  top: 0.15rem;
+  margin: 0 20px;
+  cursor: pointer;
+  color: rgb(216, 216, 216);
+  transition: all 0.5s;
+}
+
+p .fa[class~=angle]:hover {
+  color: rgb(71, 190, 115);
+}
+
+.yellow {
+  color: rgb(254, 203, 108);
+}
+
+
+/* product lightbox start */
+.product {
+  height: 500px;
+  width: 600px;
+  background: white;
+  position: relative; /* Use "relative" instead of "fit" */
+  left: 50%;
+  margin-left: -300px; /* Use margin-left to center horizontally */
+  margin-top: calc(40vh - 250px);
+  /* Other styles remain the same */
+  animation: bounce 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+#product-lightbox{
+	box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+	border-radius: 5px;
+	overflow: hidden;
+  padding: auto;
+
+	height: 500px;
+	width: 700px;
+  
+	
+} 
+
+/* Adding a bounce animation to a product */
+.product.action {
+  animation: bounce 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+/* Header Styles */
+.product .header {
+  height: 40px;
+  position: relative;
+  padding: 20px;
+}
+
+/* Back Button Styling */
+.product .header .back {
+  position: relative;
+  width: 20px;
+  height: 20px; 
+  border-top: 30px solid #8b5a2b; /* Changing to brownish color */
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #8b5a2b; /* Changing to brownish color */
+  border-right: 30px solid transparent;
+  display: block;
+  padding: 10px;
+}
+
+/* Styling for the back arrow icon */
+.product .header .back:before {
+  content: "←";
+  position: absolute;
+  color: #fff; /* Keeping it white for contrast */
+  font-size: 2.3rem;
+  font-weight: bold;
+  top: -42px;
+  left: -22px;
+}
+
+/* Main Section Styling */
+.product .main {
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+/* Product Title */
+.product h1 {
+  font-size: 3.5rem;
+  margin: 0 -5px -15px;
+  color: #232e3a;
+}
+
+/* Product Subtitle */
+.product h2 {
+  color: #999999;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Product Description */
+.product h3 {
+  color: #232e3a;
+  margin: 0;
+}
+
+/* Styling for Product Images */
+.product img {
+  max-width: 90%;
+  margin-left: 25px;
+  transition: transform 0.3s ease;
+}
+
+.product img:hover {
+  transform: scale(1.5); /* Zoom effect on hover */
+}
+
+/* Styling for hidden images */
+.product .img1, .product .img2 {
+  visibility: hidden;
+}
+
+/* Left and Right Sections */
+.product .left,
+.product .right {
+  width: 40%;
+  padding: 0 calc(5% - 50px);
+}
+
+/* Right section content styling */
+.product .right {
+  color: #8b5a2b; /* Changing text color to match brownish color */
+  line-height: 1.5;
+}
+
+/* Footer Styling */
+.product .footer {
+  position: absolute;
+  bottom: 10%;
+  padding: 0;
+  width: calc(90% - 40px);
+  left: 10%;
+  border-top: 1px solid #ccc;
+}
+
+/* Footer Text Styling */
+.product .footer p {
+  color: #8b5a2b; /* Changing color to match the brownish tone */
+  position: relative;
+}
+
+/* Button Styling */
+.btn {
+  position: relative;
+}
+
+/* Floating Styles for Left and Right */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

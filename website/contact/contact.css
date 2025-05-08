@@ -1,0 +1,600 @@
+.section-p1{
+  padding: 40px 80px;
+}
+
+
+body {
+  background-color: #282d36;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+.contact-cards {
+  width: 100%;
+  margin: 0vh auto;
+  background-color: #deb887; /* Burlywood background */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap; 
+}
+
+.contact-cards::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.contact-cards h1 {
+  text-align: center;
+  width: 100%; 
+  color: #8b5a2b; /* Darker brown text color */
+}
+
+.contact-card {
+  background-color: #8b5a2b; /* Brownish background */
+  max-width: 19%; 
+  height: 240px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 #deb887; /* Burlywood border */
+  transition: all 0.667s ease;
+  margin: 10px; 
+  color: #fff; /* White text color */
+}
+
+/* Contact Page Container */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fafafa;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the Contact Info Section */
+.contact-info {
+  width: 45%;
+  padding-right: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 1.8rem;
+  margin-right: 15px;
+  color: #8b5a2b; /* Change icon color to brown */
+}
+
+h4 {
+  color: #8b5a2b; /* Brownish heading color */
+  font-size: 1.2rem;
+  margin: 0 0 5px 0;
+}
+
+p {
+  margin: 0;
+  color: #7f8c8d;
+}
+
+/* Styling for the Contact Form Section */
+.contact-form {
+  width: 50%;
+  padding-left: 30px;
+  border-left: 2px solid #ccc;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #deb887; /* Border color matches the burlywood background */
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #8b5a2b; /* Focus state in brown */
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button {
+  padding: 15px;
+  background-color: #8b5a2b; /* Brownish button background */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #deb887; /* Button hover color in burlywood */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+      width: 90%;
+  }
+
+  .contact-info, .contact-form {
+      width: 100%;
+      margin-bottom: 30px;
+      padding-right: 0;
+      padding-left: 0;
+  }
+
+  .contact-form {
+      border-left: none;
+  }
+}
+
+/*footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space space-between;
+    background-color: #0000;
+   }
+
+   footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+   }
+
+   footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+   }
+
+   footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+   }
+
+   footer p{
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    margin: 0 0 8px 0;
+   }
+
+   footer .follow{
+    margin-top: 20px;
+   }
+
+   footer .follow i{
+    margin-top: 20px;
+    color:#465b52;
+    padding-right: 4px;
+    cursor: pointer;
+   }
+
+   footer .install img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+    margin: 10px 0 15px 0;
+   }
+
+   footer .follow i:hover,
+   footer a:hover {
+    color: #088178 ;
+   }
+   
+   footer a{
+    color: black;
+    text-decoration: none;
+   }
+
+   footer .copyright {
+    width: 100%;
+    text-align: center;
+   }
+   
+  
+  .order-container{
+    background-color: black; /* Green background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .order-container h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #486a5a;
+    font-family: 'Amatic Sc';
+    font-weight: bolder;
+  }
+  
+  .order-container p {
+    font-size:2rem;
+    margin-bottom: 20px;
+    color: #ffc107;
+  }
+  
+  .contact-info {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact-info ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .contact-info ul li a {
+    color: #486a5a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  .contact-info ul li a:hover {
+    text-decoration: underline;
+  }
+    
+  
+ /* CSS for Vertical Page Title Section */
+#page-title {
+  background-image: url(../pictures/poultry.png); /* Background image */
+  background-size: 100%; /* Background image size */
+  background-position: center; /* Center background */
+  background-attachment: fixed;
+  height: 80vh; /* Page title section height 80% of viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  animation: fadeIn 1.5s ease-in-out;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container inside the page title */
+#page-title .container {
+  width: 60%; 
+height: 50%;/* Set the container to 70% of the screen width */
+  max-width: 1000px; /* Optionally constrain it to 1200px for large screens */
+  padding: 20px;
+background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  animation: slideUp 2s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title styling */
+#page-title .container h2 {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #deb887;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 1.2s ease;
+}
+
+/* Subtitle text styling */
+#page-title p {
+  font-size: 14px;
+  color: white;
+  line-height: 1.5;
+  margin-bottom: 0;
+  animation: fadeInUp 1.5s ease;
+font-weight: bold;
+
+}
+
+/* Button styling */
+#page-title button {
+  --b: 4.5px;
+  --s: .45em;
+  --color: rgb(145, 89, 34);
+  --bg-color: burlywood;
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: var(--bg-color);
+  border: var(--b) solid white;
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 2rem;
+  user-select: none;
+  border-radius: 10px;
+}
+
+#page-title button:hover,
+#page-title button:focus-visible {
+  --_p: 1px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#page-title button:active {
+  background: var(--color);
+  color: #fff;
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+      transform: translateY(-30px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}/* Map Section Styling */
+.map-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Remove padding */
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px; /* Set max width for larger screens */
+  border-radius: 8px;
+  overflow: hidden; /* Ensure the map fits within rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.map-container iframe:hover {
+  transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .map-container {
+    width: 100%;
+    height: 100%; /* Ensure the height is full on smaller screens */
+  }
+  .map-container iframe {
+    width: 100%;
+    height: 350px; /* Maintain a specific height on smaller screens */
+  }
+}
+/* Section Styling */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* Icon styling for each social media */
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #8b5a2b; /* Text color changed to brownish shade */
+}
+
+.social-icon i {
+  font-size: 2.5rem; /* Increased icon size */
+  color: #8b5a2b; /* Icon color set to a brownish shade */
+}
+
+/* Specific Colors for Each Platform */
+.social-icon.facebook {
+  background-color: #deb887; /* Burlywood background */
+  color: white;
+}
+
+.social-icon.facebook:hover {
+  background-color: transparent; /* Darker brown for hover */
+}
+
+.social-icon.whatsapp {
+  background-color: #deb887; /* Burlywood background */
+  color: white;
+}
+
+.social-icon.whatsapp:hover {
+  background-color: transparent; /* Darker brown for hover */
+}
+
+.social-icon.messenger {
+  background-color: #deb887; /* Burlywood background */
+  color: white;
+}
+
+.social-icon.messenger:hover {
+  background-color: transparent; /* Darker brown for hover */
+}
+
+.social-icon.telegram {
+  background-color: #deb887; /* Burlywood background */
+  color: white;
+}
+
+.social-icon.telegram:hover {
+  background-color: transparent; /* Darker brown for hover */
+}
+
+.social-icon.phone {
+  background-color: #deb887; /* Burlywood background */
+  color: white;
+}
+
+.social-icon.phone:hover {
+  background-color: transparent; /* Darker brown for hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .icon-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-icon {
+    width: 90%;
+    max-width: 200px;
+  }
+
+  .social-icon i {
+    font-size: 3rem;
+  }
+
+  .social-icon p {
+    font-size: 16px;
+  }
+}
+
+/* Dropdown Background */
+.dropdown-menu {
+  background-color: #deb887 !important; /* Light burlywood background */
+  border: 1px solid #deb887 !important; /* Matching border */
+}
+/* Account Dropdown Styles */
+.custom-account-dropdown .nav-link {
+  color: #deb887; /* Burlywood color for the Account link */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-account-dropdown .nav-link:hover {
+  color: #8b5a2b; /* Darker burlywood color on hover */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Dropdown Menu Styling */
+.custom-account-dropdown .dropdown-menu {
+  background-color: #deb887; /* Light burlywood background */
+  border: 1px solid #deb887; /* Burlywood border for dropdown */
+}
+
+.custom-account-dropdown .dropdown-item {
+  color: #8b5a2b; /* Text in dark burlywood */
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.custom-account-dropdown .dropdown-item:hover {
+  background-color: #deb887; /* Medium burlywood background on hover */
+  color: white; /* White text on hover for contrast */
+}
+

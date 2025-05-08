@@ -1,0 +1,647 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+}
+/* header section */
+
+
+.fa-cart-shopping {
+  color: yellow; /* Cart icon in yellow */
+  transition: color 0.3s ease-in-out;
+}
+
+.fa-cart-shopping:hover {
+  color: gold; /* Slightly different yellow on hover */
+}
+
+#partner-banner {
+  background-color: #f9f9f9;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#partner-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.partner-logos img {
+  height: 80px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.partner-logos img:hover {
+  transform: scale(1.1);
+}
+/* Change font style for the welcome message */
+#navbarDropdown {
+  font-family: 'Poppins', sans-serif; /* Example font */
+  font-weight: bold; /* Make it bold */
+  font-size: 1rem; /* Adjust the size as needed */
+  color:#f9f9f9; /* Set the color */
+  text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3); /* Add a slight shadow */
+}
+
+/* Optional: Hover effect for the welcome message */
+#navbarDropdown:hover {
+  color: burlywood; /* Change the text color on hover */
+  text-shadow: none; /* Remove shadow on hover if desired */
+}
+/* Cart Button */
+.btn-info {
+  background-color: #deb887 !important; /* Burlywood button background */
+  border-color: #8b5a2b !important; /* Darker burlywood for border */
+  color: #fff !important; /* White text */
+  font-weight: bold; /* Enhance readability */
+}
+
+/* Cart Button Hover */
+.btn-info:hover {
+  background-color: #8b5a2b !important; /* Darker burlywood for hover */
+  border-color: #deb887 !important; /* Swap border color */
+  color: #fff !important; /* Ensure text remains white */
+}
+
+/* Badge on Cart Button */
+.badge-pill {
+  background-color: #8b5a2b !important; /* Dark burlywood badge */
+  color: white !important; /* White text */
+}
+
+/* Dropdown Background */
+.dropdown-menu {
+  background-color: #f5deb3 !important; /* Light burlywood background */
+  border: 1px solid #deb887 !important; /* Matching border */
+}
+
+/* Cart Item Text */
+.cart-detail-product p {
+  color: #4b3621 !important; /* Deep brown for product title */
+  font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+/* Cart Item Price */
+.cart-detail-product .text-info {
+  color: #deb887 !important; /* Burlywood price color */
+  font-weight: bold; /* Make it stand out */
+}
+
+/* Checkout Buttons */
+.checkout .btn-primary {
+  background-color: #8b5a2b !important; /* Dark burlywood button background */
+  border: none !important; /* Remove border */
+  color: white !important; /* White text */
+}
+
+/* Checkout Buttons Hover */
+.checkout .btn-primary:hover {
+  background-color: #deb887 !important; /* Lighter burlywood hover */
+  color: #fff !important; /* Ensure white text */
+}
+/* Total Text Section */
+.total-section p {
+  font-size: 18px; /* Slightly larger for emphasis */
+  color: #3b280f !important; /* Burlywood color for the total amount */
+  font-weight: bold; /* Make it stand out */
+}
+
+/* Amount Color */
+.total-section .text-info {
+  color: #8b5a2b !important; /* Darker burlywood for the total amount */
+  font-weight: bold;
+}
+
+/* Total Section Background */
+.total-header-section {
+  background-color: #f5deb3 !important; /* Light burlywood background for the total row */
+  border-top: 1px solid #f1c183 !important; /* Burlywood border */
+  padding: 10px;
+}
+
+
+/* Dropdown Background */
+.dropdown-menu {
+  background-color: #deb887 !important; /* Light burlywood background */
+  border: 1px solid #deb887 !important; /* Matching border */
+}
+/* Account Dropdown Styles */
+.custom-account-dropdown .nav-link {
+  color: #deb887; /* Burlywood color for the Account link */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-account-dropdown .nav-link:hover {
+  color: #8b5a2b; /* Darker burlywood color on hover */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Dropdown Menu Styling */
+.custom-account-dropdown .dropdown-menu {
+  background-color: #deb887; /* Light burlywood background */
+  border: 1px solid #deb887; /* Burlywood border for dropdown */
+}
+
+.custom-account-dropdown .dropdown-item {
+  color: #8b5a2b; /* Text in dark burlywood */
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.custom-account-dropdown .dropdown-item:hover {
+  background-color: #deb887; /* Medium burlywood background on hover */
+  color: white; /* White text on hover for contrast */
+}
+
+
+/* one homepage */
+.section-p1{
+    padding: 40px 80px;
+}
+#one {
+  background-image: url( ../pictures/poultry.png );   
+  height: 95vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;   
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center; /* Centering the text */
+}
+
+#one h4 {
+  padding-bottom: 15px;
+  color: white; 
+  font-size: 1.5rem;
+  margin-bottom: 10px; /* Space for visual hierarchy */
+}
+
+#one h2 {
+  color: white;
+  font-size: 2rem;
+
+  
+}
+
+#one h1 {
+  color: burlywood; /* Text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent white background (50% opacity) */
+  padding: 15px 30px; /* Add some padding to create the text box effect */
+  display: inline-block; /* Make the background only cover the text */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  font-weight: 800;
+  font-size: 2.5rem; /* Slightly larger for better emphasis */
+  text-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.7); /* Shadow for readability */
+  margin-top: 5px; /* Reduced margin to bring text closer */
+  margin-bottom: 20px; /* Reduced margin to bring text closer */
+}
+
+#one p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px; /* Space between the paragraph and the button */
+}
+
+#one button {
+  --b: 4px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: rgb(145, 89, 34); 
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 20px;
+  font-weight: bold;
+  border: 0;
+  margin-top: 2rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#one button:hover,
+#one button:focus-visible {
+  --_p: 1px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+#one button:active {
+  background: var(--color);
+  color: #fff;
+}
+
+#two{
+    text-align: center;
+}
+
+#two .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#two .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.02s ease;
+    position: relative;
+}
+
+#two .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#two .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#two .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#two .pro .des span{
+    color: #000;
+    font-size: 12px;
+
+}
+
+#two .pro .des h5{
+    padding-top: 7px;
+    color: #000;
+    font-size: 14px;
+}
+
+#two .pro .des i{
+    font-size: 12px;
+    color: #f3b519;
+}
+
+#two .pro .des h4{
+    padding-top: 7px;
+    font-size:  15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#two .pro  .cart{
+width: 40px;
+height: 40px;
+line-height: 40px;
+border-radius: 50px;
+background-color: rgb(150, 149, 149);
+font-weight: 5000;
+color-scheme: #826b16;
+border: 1px solid #cce7d0;
+position: absolute;
+bottom: 20px;
+right: 10px;
+
+
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4{
+    color: white;
+    font-size: 16px;
+
+}
+
+#banner h2{
+    color: white;
+    font-size: 35px;
+    padding: 10px 0;
+}
+
+#banner b{
+    color: red;
+}
+.fancy {
+    background-color: grey;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+   }
+   
+   .fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+   }
+   
+   .fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+   }
+   
+   .fancy .top-key {
+    margin-top: 2rem;
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy:hover {
+    color: white;
+    background: black;
+   }
+   
+   .fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+   }
+   
+   .fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+   }
+   
+   .fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+   }
+   
+   .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+   }
+
+   #newsletter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../pictures/minibackground1.jpg);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+   
+
+   #newsletter h4{
+    font-size: 22px;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+   }
+
+   #newsletter p span{
+    color: rgba(136, 4, 4, 0.986);
+    font-weight: bold;
+   }
+   #newsletter p{
+    color:#fff;
+
+   }
+
+   #newsletter .form{
+    display: flex;
+    width: 40%;
+   }
+
+   #newsletter input{
+    height: auto;
+    padding: 0 2.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+   }
+
+   #newsletter button{
+    background-color: grey;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+   }
+
+  
+   .box {
+    width: 140px;
+    height: auto;
+    float: left;
+    transition: .5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+  .box:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(100%);
+  }
+  
+  .box:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+  }
+  
+  .box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .box:hover:before {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .3s;
+  }
+  
+  .box:hover:after {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .5s;
+  }
+  
+  
+/*footer*/
+   footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space space-between;
+    background-color: #0000;
+   }
+
+   footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+   }
+
+   footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+   }
+
+   footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+   }
+
+   footer p{
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    margin: 0 0 8px 0;
+   }
+
+   footer .follow{
+    margin-top: 20px;
+   }
+
+   footer .follow i{
+    margin-top: 20px;
+    color:#465b52;
+    padding-right: 4px;
+    cursor: pointer;
+   }
+
+   footer .install img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+    margin: 10px 0 15px 0;
+   }
+
+   footer .follow i:hover,
+   footer a:hover {
+    color: #088178 ;
+   }
+   
+   footer a{
+    color: black;
+    text-decoration: none;
+   }
+
+   footer .copyright {
+    width: 100%;
+    text-align: center;
+   }
+   
+
+
+
+   
